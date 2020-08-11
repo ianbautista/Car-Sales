@@ -5,6 +5,8 @@ import AddedFeatures from "./components/AddedFeatures";
 import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
 
+import { connect } from "react-redux";
+
 const App = (props) => {
 	return (
 		<div className="boxes">
@@ -20,4 +22,12 @@ const App = (props) => {
 	);
 };
 
-export default App;
+const mapStateToProps = (state) => {
+	return {
+		additionalFeatures: state.additionalFeatures,
+		additionalPrice: state.additionalPrice,
+		car: state.car,
+	};
+};
+
+export default connect(mapStateToProps, {})(App);
