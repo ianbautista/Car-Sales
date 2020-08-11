@@ -6,5 +6,5 @@ export const addFeature = (featureName) => {
 };
 
 export const removeFeature = (featureName) => {
-	return { type: REMOVE_FEATURE, payload: null };
+	return { type: REMOVE_FEATURE, payload: featureName };
 };

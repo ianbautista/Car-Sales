@@ -6,14 +6,15 @@ import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
 
 import { connect } from "react-redux";
+import { addFeature, removeFeature } from "./utils/actions";
 
 const App = (props) => {
-	const removeFeature = (feature) => {
-		props.removeFeature(feature);
-	};
-
 	const addFeature = (feature) => {
 		props.addFeature(feature);
+	};
+
+	const removeFeature = (feature) => {
+		props.removeFeature(feature);
 	};
 
 	return (
@@ -41,4 +42,4 @@ const mapStateToProps = (state) => {
 	};
 };
 
-export default connect(mapStateToProps, {})(App);
+export default connect(mapStateToProps, { addFeature, removeFeature })(App);
