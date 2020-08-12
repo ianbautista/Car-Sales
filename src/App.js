@@ -19,7 +19,7 @@ const App = (props) => {
 
 	return (
 		<div className="boxes">
-			<div className="box">
+			<div className="box .content are-medium">
 				<Header car={props.car} />
 				<AddedFeatures car={props.car} removeFeature={removeFeature} />
 			</div>

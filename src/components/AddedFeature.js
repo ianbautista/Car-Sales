@@ -2,14 +2,15 @@ import React from "react";
 
 const AddedFeature = (props) => {
 	return (
-		<li className="has-text-primary">
+		<li>
 			{/* Add an onClick to run a function to remove a feature */}
 			<button
-				className="button.is-rounded has-background-primary"
+				className="button is-primary is-rounded is-small"
 				onClick={() => props.removeFeature(props.feature)}
 			>
 				X
-			</button>
+			</button>{" "}
+			&nbsp;
 			{props.feature.name}
 		</li>
 	);

@@ -4,9 +4,13 @@ const AdditionalFeature = (props) => {
 	return (
 		<li className="has-background-primary-light">
 			{/* Add an onClick that will let you add a feature to your car */}
-			<button className="has-text-primary" onClick={() => props.addFeature(props.feature)}>
+			<button
+				className="button is-primary is-rounded is-small"
+				onClick={() => props.addFeature(props.feature)}
+			>
 				Add
-			</button>
+			</button>{" "}
+			&nbsp;
 			{props.feature.name} (+{props.feature.price})
 		</li>
 	);
